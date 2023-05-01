@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adrian da Monkey</title>
+	<style>
+		#monkey {
+			position: absolute;
+			animation: bounce 2s infinite;
+		}
+
+		@keyframes bounce {
+			0% { transform: translate(0, 0); }
+			50% { transform: translate(200px, 0); }
+			100% { transform: translate(0, 0); }
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<label>Divanni house warming party?</label>
+	</div>
+	<div>
+		<form onsubmit="playSound(); return false;">
+			<input type="text" name="yes" />
+			<button type="submit">Submit</button>
+		</form>
+	</div>
+	<h1>Adrian Da Monkey</h1>
+	<img id="monkey" src="https://media.npr.org/assets/img/2017/09/12/macaca_nigra_self-portrait-3e0070aa19a7fe36e802253048411a38f14a79f8-s1100-c50.jpg" alt="Adrian the Swirling Monkey" width="500">
+	<audio id="sound" src="vine-boom.mp3"></audio>
+	<script>
+		function playSound() {
+			var sound = document.getElementById("sound");
+			sound.play();
+		}
+	</script>
+</body>
+</html>
